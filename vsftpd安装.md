@@ -34,9 +34,9 @@ xferlog_file=/var/log/xferlog<br/>
 xferlog_std_format=YES<br/>
 ascii_upload_enable=YES<br/>
 ascii_download_enable=YES<br/>
-chroot_local_user=NO<br/>
+chroot_local_user=YES<br/>
 chroot_list_enable=NO<br/>
-allow_writeable_chroot=NO<br/>
+allow_writeable_chroot=YES<br/>
 local_root=/data/ftp<br/>
 pam_service_name=vsftpd<br/>
 userlist_enable=YES<br/>
@@ -50,7 +50,10 @@ connect_from_port_20=NO<br/>
 pasv_enable=YES<br/>
 pasv_min_port=8082<br/>
 pasv_max_port=8082<br/>
+pasv_address=47.252.0.156<br/>
+pasv_addr_resolve=YES<br/>
 pasv_promiscuous=YES<br/>
+reverse_lookup_enable=NO<br/>
 
 8. 修改/etc/vsftpd/user_list文件，加入创建的ftp用户<br/>
 echo "ftper" >> /etc/vsftpd/user_list
