@@ -21,7 +21,7 @@ yum -y install vsftpd
 
 7. 修改/etc/vsftpd/vsftpd.conf内容如下：<br/>
 listen=YES<br/>
-listen_port=9092<br/>
+listen_port=自定义端口<br/>
 listen_ipv6=NO<br/>
 anonymous_enable=NO<br/>
 local_enable=YES<br/>
@@ -48,9 +48,9 @@ dual_log_enable=YES<br/>
 vsftpd_log_file=/var/log/vsftpd.log<br/>
 connect_from_port_20=NO<br/>
 pasv_enable=YES<br/>
-pasv_min_port=8082<br/>
-pasv_max_port=8082<br/>
-pasv_address=47.252.0.156<br/>
+pasv_min_port=最小端口<br/>
+pasv_max_port=最大端口<br/>
+pasv_address=真实IP<br/>
 pasv_addr_resolve=YES<br/>
 pasv_promiscuous=YES<br/>
 reverse_lookup_enable=NO<br/>
