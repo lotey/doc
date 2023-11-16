@@ -58,7 +58,7 @@ reverse_lookup_enable=NO<br/>
 8. 修改/etc/vsftpd/user_list文件，加入创建的ftp用户<br/>
 echo "ftper" >> /etc/vsftpd/user_list
 
-9. 修改/etc/vsftpd/user_list中的pam_shells.so为pam_nologin.so，示例如下：<br/>
+9. 修改/etc/vsftpd/user_list或者/etc/pam.d/vsftpd中的pam_shells.so为pam_nologin.so，示例如下：<br/>
 session    optional     pam_keyinit.so    force revoke<br/>
 auth       required	pam_listfile.so item=user sense=deny file=/etc/vsftpd/ftpusers onerr=succeed<br/>
 auth       required	pam_nologin.so<br/>
